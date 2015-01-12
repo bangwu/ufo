@@ -1,6 +1,36 @@
+function data_to_view(foods) {
+    var foods_div=_.map(foods,function(food){
+        return food_to_div(food);
+    });
+
+    _.each(foods_div,function(food_div){
+       $("#foods").append(food_div);
+    });
+}
+
+function get_name(name) {
+    return $("<h3>").attr("class","text-center").html(name);
+}
+function get_image(img) {
+    return $("<img>").
+        attr("class","image").
+        attr("src",img);
+}
+function get_price(price) {
+    return $("<h4>").attr("class","text-center").html('价格:'+price);
+}
+
+function food_to_div(food){
+    return $("<div>").
+        attr("class","food").
+        attr("id",food.id).
+        append(get_name(food.name)).
+        append(get_image(food.img)).
+        append(get_price(food.price))
+}
 /**
  * Created by twer on 1/10/15.
  */
-function click(){
-    alert("hello");
-}
+$(document).ready(function(){
+    data_to_view(foods);
+});
