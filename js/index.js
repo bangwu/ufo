@@ -9,15 +9,23 @@ function data_to_view(foods) {
 }
 
 function get_name(name) {
-    return $("<h3>").attr("class","text-center").html(name);
+    return $("<h3>").attr("class","text-center").
+        html(name);
 }
 function get_image(img) {
     return $("<img>").
-        attr("class","image").
+        attr("class","img-rounded image").
         attr("src",img);
 }
 function get_price(price) {
-    return $("<h4>").attr("class","text-center").html('价格:'+price);
+    return $("<h4>").attr("class","text-center").
+        html('价格:'+price);
+}
+
+function get_button(){
+    return $("<button>").
+        addClass("btn btn-primary add_food_button").
+        html("add");
 }
 
 function food_to_div(food){
@@ -26,7 +34,7 @@ function food_to_div(food){
         attr("id",food.id).
         append(get_name(food.name)).
         append(get_image(food.img)).
-        append(get_price(food.price))
+        append(get_price(food.price)).append(get_button())
 }
 /**
  * Created by twer on 1/10/15.
