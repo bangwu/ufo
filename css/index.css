@@ -1,6 +1,44 @@
 body{
-    background-color: antiquewhite;
+    background-color: #c0a16b;
 }
+
+.restaurants{
+    width: 60%;
+    margin: 10px 20% 0 20%;
+}
+
+.head{
+    background-color: lightpink;
+    height: 40px;
+}
+.nav-menu{
+    background-color: khaki;
+    height: 40px;
+}
+.nav-menu table{
+    width: 100%;
+    height: 100%;
+}
+
+
+.content-left{
+    background-color: khaki;
+    width: 20%;
+    height: 600px;
+    float: left;
+    margin-top: 10px;
+}
+.content-left ul li{
+
+}
+.content-right{
+    background-color: khaki;
+}
+
+.btn-width{
+    width: 100%;
+}
+
 .image{
     float: left;
     width: 120px;
