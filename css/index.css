@@ -1,55 +1,104 @@
+body,
+section,header,ul,li,
+button,img,h1,h2{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 body{
-    background-color: #c0a16b;
+	font-size: 62.5%;
 }
 
-.restaurants{
-    width: 60%;
-    margin: 10px 20% 0 20%;
+section{
+	color: white;
+	max-width: 150em;
+	margin: 0 auto;
+	background: url(../images/find-an-agent-hero.png);
+	background-size: cover;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+section.top .logo img{
+	float: left;
+	width: 120px;
+	margin-right: 1em;
+	margin-top: 1em;
 }
 
-.head{
-    background-color: lightpink;
-    height: 40px;
-}
-.nav-menu{
-    background-color: khaki;
-    height: 40px;
-}
-.nav-menu table{
-    width: 100%;
-    height: 100%;
+section.top .logo ul{
+	float: right;
+	margin-right: 1em;
+	margin-left: 1em;
 }
 
-
-.content-left{
-    background-color: khaki;
-    width: 20%;
-    height: 600px;
-    float: left;
-    margin-top: 10px;
-}
-.content-left ul li{
-
-}
-.content-right{
-    background-color: khaki;
+section.top .logo ul li{
+	list-style: none;
+	float: left;
+	margin: 0 1em;
+	font-size: 2.4em;
+	border-radius: 4px;
 }
 
-.btn-width{
-    width: 100%;
+section.top .logo ul li:last-child{
+	border: 1px solid blue;
 }
 
-.image{
-    float: left;
-    width: 120px;
-    height: 120px;
+section.top .nav{
+	clear: both;
 }
-.food{
-    margin-left: 10px;
-    float: left;
-    width: 120px;
-    text-align: center;
+section.top .nav div{
+	float: left;
+	width: 20%;
+	font-size: 2.4em;
+	text-align: center;
+	padding: .5em 0;
 }
-.text-center{
-    text-align: center;
+
+section.content{
+	height: 85em;
+}
+
+section.content .left{
+	float: left;
+}
+
+section.content .left ul li{
+	font-size: 2em;
+	margin-left: 1em;
+	text-align: center;
+	width: 12em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+section.content .left ul li:first-child{
+	background-color: lightblue;
+}
+
+section.content .clear{
+	clear: both;
+}
+section.content .right .ng-scope{
+	float: left;
+}
+
+.ng-binding{
+	font-size: 3em;
+}
+li.ng-binding{
+	list-style: none;
+	margin-left: 1em;
+	width: 5em;
+	text-align: center;
+}
+
+div.food{
+	width: 18em;
+	height: 27em;
+	margin: 1em;
+}
+div.food img{
+	width: 18em;
+	height: 18em;
 }

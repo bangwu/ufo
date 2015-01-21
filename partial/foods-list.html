@@ -2,7 +2,5 @@
     <div class="food" ng-repeat="food in foods">
         <h3 class="text-center">{{food.name}}</h3>
         <a href="#/list/{{food.id}}"><img class="img-rounded image" ng-src="{{food.img}}"/></a>
-        <h4 class="text-center">价格：{{food.price}}</h4>
-        <button class="btn btn-default" ng-click="add_food(food.id)">add</button>
     </div>
 </div>
