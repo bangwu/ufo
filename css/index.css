@@ -76,8 +76,14 @@ section.content .left ul li:first-child{
 	background-color: lightblue;
 }
 
+/*
 section.content .clear{
 	clear: both;
+}
+*/
+section.content .right{
+	float: right;
+	width: 80%;
 }
 section.content .right .ng-scope{
 	float: left;
