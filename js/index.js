@@ -14,7 +14,6 @@ test.config(['$routeProvider', function($routeProvider){
 			controller: PayFoodsController}).
         otherwise({redirectTo: '/list'});
 }]);
-
 AreaController= function($scope,$http){
 	$http.get('/js/areas.json').success(function(data){
 		$scope.areas=data;
