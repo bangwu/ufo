@@ -16,25 +16,25 @@ test.config(['$routeProvider', function($routeProvider){
 }]);
 
 test.controller("AreaController",['$scope','$http',function($scope,$http){
-	$http.get('/js/areas.json').success(function(data){
+	$http.get('data/areas.json').success(function(data){
 		$scope.areas=data;
 	});
 }]);
 
 test.controller("FoodTypeController",['$scope','$http',function($scope,$http){
-	$http.get('js/food_types.json').success(function(data){
+	$http.get('data/food_types.json').success(function(data){
 		$scope.food_types=data;
 	});
 }]);
 
 test.controller("PriceScopeController",['$scope','$http',function($scope,$http){
-	$http.get('js/price_scope.json').success(function(data){
+	$http.get('data/price_scope.json').success(function(data){
 		$scope.price_scopes=data;
 	});
 }]);
 
 test.controller("FoodListController",['$scope','$http',function($scope,$http){
-    $http.get('js/foods.json').success(function(data){
+    $http.get('data/foods.json').success(function(data){
         $scope.foods=data;
     });
 }]);
@@ -43,7 +43,7 @@ test.controller("FoodListController",['$scope','$http',function($scope,$http){
 var pay_foods=[];
 
 test.controller('FoodDetailController',['$scope','$routeParams','$http',function($scope,$routeParams,$http){
-    $http.get('js/foods.json').success(function(data){
+    $http.get('data/foods.json').success(function(data){
         $scope.foods=data;
         $scope.food=$scope.foods[parseInt($routeParams.foodId)];
     });
