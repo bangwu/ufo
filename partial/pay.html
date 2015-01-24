@@ -1,4 +1,12 @@
-<ul ng-repeat="food in foods track in $index">
-	<li>{{food.name}}</li>
-	<li>{{food.price}}</li>
-</ul>
+<table class="pay">
+	<tr>
+		<td>name</td>
+		<td>price</td>
+		<td>account</td>
+	</tr>
+	<tr ng-repeat="food in foods track by $index">
+		<td>{{food.name}}</td>
+		<td>{{food.price}}</td>
+		<td>{{food.price}}</td>
+	</tr>
+</table>

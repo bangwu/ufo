@@ -30,26 +30,17 @@
    </section>
    <section class="content">
    		<div class="left">
-   			<ul>
+   			<ul ng-controller="AreaController">
    				<li>地区</li>
-   				<li>武汉</li>
-   				<li>北京</li>
-   				<li>上海</li>
-   				<li>西安</li>
+   				<li ng-repeat="area in areas">{{area.name}}</li>
    			</ul>
-   			<ul>
+   			<ul ng-controller="FoodTypeController">
    				<li>菜系</li>
-   				<li>川菜</li>
-   				<li>香菜</li>
-   				<li>鲁菜</li>
-   				<li>粤菜</li>
+   				<li ng-repeat="food_type in food_types">{{food_type.name}}</li>
    			</ul>
-   			<ul>
+   			<ul ng-controller="PriceScopeController">
    				<li>价格范围</li>
-   				<li>￥50以下</li>
-   				<li>￥51-100</li>
-   				<li>￥101-200</li>
-   				<li>￥200以上</li>
+   				<li ng-repeat="price_scope in price_scopes">{{price_scope.from}}-{{price_scope.to}}</li>
    			</ul>
    			<ul>
    				<li>支付方式</li>

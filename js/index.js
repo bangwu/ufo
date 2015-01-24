@@ -5,29 +5,44 @@ var test=angular.module("test",['ngRoute']);
 test.config(['$routeProvider', function($routeProvider){
     $routeProvider.when('/list',{
             templateUrl:'partial/foods-list.html',
-            controller: FoodListController}).
+            controller: 'FoodListController'}).
         when('/list/:foodId',{
             templateUrl:'partial/food-detail.html',
-            controller: FoodDetailController}).
+            controller: 'FoodDetailController'}).
 		when('/pay',{
 			templateUrl:'partial/pay.html',
-			controller: PayFoodsController}).
+			controller: 'PayFoodsController'}).
         otherwise({redirectTo: '/list'});
 }]);
-AreaController= function($scope,$http){
+
+test.controller("AreaController",['$scope','$http',function($scope,$http){
 	$http.get('/js/areas.json').success(function(data){
 		$scope.areas=data;
 	});
-}
+}]);
 
-FoodListController = function($scope,$http){
+test.controller("FoodTypeController",['$scope','$http',function($scope,$http){
+	$http.get('js/food_types.json').success(function(data){
+		$scope.food_types=data;
+	});
+}]);
+
+test.controller("PriceScopeController",['$scope','$http',function($scope,$http){
+	$http.get('js/price_scope.json').success(function(data){
+		$scope.price_scopes=data;
+	});
+}]);
+
+test.controller("FoodListController",['$scope','$http',function($scope,$http){
     $http.get('js/foods.json').success(function(data){
         $scope.foods=data;
     });
-};
+}]);
+
+
 var pay_foods=[];
 
-FoodDetailController = function($scope,$routeParams,$http){
+test.controller('FoodDetailController',['$scope','$routeParams','$http',function($scope,$routeParams,$http){
     $http.get('js/foods.json').success(function(data){
         $scope.foods=data;
         $scope.food=$scope.foods[parseInt($routeParams.foodId)];
@@ -37,8 +52,8 @@ FoodDetailController = function($scope,$routeParams,$http){
 		pay_foods.push($scope.foods[parseInt($routeParams.foodId)]);
     }
 	redirectTo: '/list';
-}
+}]);
 
-PayFoodsController = function($scope){
+test.controller('PayFoodsController',['$scope',function($scope){
 	$scope.foods=pay_foods;
-}
+}]);

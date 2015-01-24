@@ -76,16 +76,12 @@ section.content .left ul li:first-child{
 	background-color: lightblue;
 }
 
-/*
-section.content .clear{
-	clear: both;
-}
-*/
 section.content .right{
 	float: right;
 	width: 80%;
 }
-section.content .right .ng-scope{
+
+section.content .right .food{
 	float: left;
 }
 
@@ -107,4 +103,8 @@ div.food{
 div.food img{
 	width: 18em;
 	height: 18em;
+}
+
+.table{
+	border: 1px solid green;
 }
