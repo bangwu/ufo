@@ -15,6 +15,10 @@ test.config(['$routeProvider', function($routeProvider){
         otherwise({redirectTo: '/list'});
 }]);
 
+test.factory("pays",function(){
+	return pay_foods;
+});
+
 test.controller("AreaController",['$scope','$http',function($scope,$http){
 	$http.get('data/areas.json').success(function(data){
 		$scope.areas=data;
